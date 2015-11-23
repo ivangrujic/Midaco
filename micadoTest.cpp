@@ -34,19 +34,20 @@
 
 ***********************************************************************************/
 
-#include <iostream>
+
 
 #include <midaco.h>
 
 long int iw[1000]; 
-static double x[100],xl[100],xu[100],g[100],rw[10000],param[9],Fobj[1], K[3],f[3];
+//static double x[100],xl[100],xu[100],g[100],rw[10000],param[9],Fobj[1], K[3],f[3];
+static double x[3], xl[3], xu[3], g[1], rw[1000], param[9], Fobj[1], K[3];
 
 long int p,n,ni,m,me,i,iflag,istop,liw,lrw, maxeval, printeval, save2file, maxtime; //
 
 void problem_function( double *F, double *X, double *K, double *f);
 
 
-int main()
+void solve(double *f)
 {   
     //using namespace Midaco;
 /*  *******************************************************************************/
@@ -85,15 +86,15 @@ int main()
 	K[1] = 102;
 	K[2] = 512;
 
-	f[0] = 100;
-	f[1] = 5;
-	f[2] = 2;
+	//f[0] = f[0]_;
+	//f[1] = f[1]_;
+	//f[2] = f[2]_;
 
 	/*  *******************************************************************************/
 
 /*  STEP 2.A: Define stopping criteria */
 /*  ********************************** */
-    maxeval = 10000;     /* Maximum number of function evaluation (e.g. 1000000) */
+    maxeval = 100000;     /* Maximum number of function evaluation (e.g. 1000000) */
 	maxtime = 60;  /* Maximum time limit in Seconds (e.g. 1 Day = 60*60*24) */
 
 /*  STEP 2.B: Choose printing options  */
@@ -150,9 +151,9 @@ int main()
 /*  *******************************************************************************/
 /*  printf("\n Pause"); getchar(); (Note: getchar() needs #include <stdlib.h>) */ 
 
-	system("pause");
+	
 
-    return 0;
+    //return 0;
 }/* END MAIN PROGRAM */
 
 

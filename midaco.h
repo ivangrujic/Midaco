@@ -1,8 +1,6 @@
 #ifndef MIDACO_H
 #define MIDACO_H
 
-//namespace Midaco
-//{
 
 #ifndef F2C_INCLUDE
 #define F2C_INCLUDE
@@ -196,12 +194,8 @@ int midaco_print(int,long int,long int,long int*,long int*,double*,double*,
                double*,double*,double*,long int,long int,long int,long int,
              double*,long int,long int,double*,long int,char*);
 
+void solve(double *);
 
-//}
-//using namespace Midaco;
-
-void midacoTest();
-//integer pow_ii(integer *ap, integer *bp);
 
 
 #endif // MIDACO_H
