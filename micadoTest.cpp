@@ -66,17 +66,17 @@ void solve(double *f)
 
 /*  STEP 1.B: Define lower and upper bounds 'xl' & 'xu'  */
 /*  ***************************************************  */
-    for( i=0; i<n; i++)
-    {
-      xl[i] = -0.2;
-      xu[i] = 0.2;
-    }
-
+	xl[0] = -3.33;
+	xl[1] = -3.33;
+	xl[2] = -0.15;
+	xu[0] = 3.33;
+	xu[1] = 3.33;
+	xu[2] = 0.15;
 /*  STEP 1.C: Define starting point 'X'  */
 /*  ***********************************  */
     for( i=0; i<n; i++)
     { 
-		x[i] = 0;//xl[i]; /* Here for example: starting point = lower bounds */
+		x[i] = 0.1;//xl[i]; /* Here for example: starting point = lower bounds */
     } 
 /*  *******************************************************************************/
 
@@ -94,12 +94,12 @@ void solve(double *f)
 
 /*  STEP 2.A: Define stopping criteria */
 /*  ********************************** */
-    maxeval = 100000;     /* Maximum number of function evaluation (e.g. 1000000) */
+    maxeval = 20;     /* Maximum number of function evaluation (e.g. 1000000) */
 	maxtime = 60;  /* Maximum time limit in Seconds (e.g. 1 Day = 60*60*24) */
 
 /*  STEP 2.B: Choose printing options  */
 /*  *********************************  */
-    printeval = 1000;  /* Print-Frequency for current best solution (e.g. 1000) */
+    printeval = 10;  /* Print-Frequency for current best solution (e.g. 1000) */
     save2file = 1;     /* Save SCREEN and SOLUTION to TXT-files [ 0=NO/ 1=YES] */
     
 /*  *******************************************************************************/
